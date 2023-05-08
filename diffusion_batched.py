@@ -78,7 +78,7 @@ def get_diffuson_output(img, timesteps, img_path, save_path):
 
 
 #write dataloader 
-# list_corruptions = ['brightness', 'fog', 'contrast', 'frost']
+list_corruptions = ['brightness', 'fog', 'contrast', 'frost']
 # list_corruptions = ['defocus_blur', 'elastic_transform', 'glass_blur', 'impulse_noise']
 # list_corruptions = ['brightness', 'contrast', 'defocus_blur', 'elastic_transform']
 # list_corruptions = ['pixelate', 'shot_noise', 'snow', 'zoom_blur']
