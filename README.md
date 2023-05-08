@@ -52,7 +52,7 @@ Next, specify the root folder for all datasets `_C.DATA_DIR = "./data"` in the f
 
 We provide config files for all experiments and methods. Simply run the following Python file with the corresponding config file.
 ```bash
-python test_time.py --cfg cfgs/[cifar10_c/cifar100_c/imagenet_c/imagenet_others/domainnet126]/[source/norm_test/norm_alpha/tent/memo/eta/eata/cotta/adacontrast/lame/sar/rotta/gtta/rmt].yaml
+python test_time.py --cfg cfgs/[cifar10_c/imagenet_c/]/[source/tent/adacontrast/cotta/diff_cotta].yaml
 ```
 
 ### Changing Configurations
@@ -73,3 +73,4 @@ python test_time.py --cfg cfgs/imagenet_c/tent.yaml MODEL.ARCH resnet50 MODEL.WE
 + MEMO [official](https://github.com/zhangmarvin/memo)
 + RoTTA [official](https://github.com/BIT-DA/RoTTA)
 + SAR [official](https://github.com/mr-eggplant/SAR)
+**** TO ADD RMT? ****
