@@ -1,0 +1,237 @@
+[23/05/07 00:53:13] [conf.py:  322]: PyTorch Version: torch=1.13.1+cu117, cuda=11.7, cudnn=8500
+[23/05/07 00:53:13] [conf.py:  323]: ADACONTRAST:
+  ALPHA: 1.0
+  BETA: 1.0
+  CE_SUP_TYPE: weak_strong
+  CE_TYPE: standard
+  CONTRAST_TYPE: class_aware
+  DIST_TYPE: cosine
+  ETA: 1.0
+  NUM_NEIGHBORS: 10
+  QUEUE_SIZE: 16384
+  REFINE_METHOD: nearest_neighbors
+BN:
+  ALPHA: 0.1
+CKPT_DIR: ./ckpt
+CKPT_PATH: 
+CONTRAST:
+  MODE: all
+  PROJECTION_DIM: 128
+  TEMPERATURE: 0.1
+CORRUPTION:
+  DATASET: cifar10_cd
+  NUM_EX: -1
+  SEVERITY: [5]
+  TYPE: ['gaussian_noise', 'shot_noise', 'impulse_noise', 'defocus_blur', 'glass_blur', 'motion_blur', 'zoom_blur', 'snow', 'frost', 'fog', 'brightness', 'contrast', 'elastic_transform', 'pixelate', 'jpeg_compression']
+COTTA:
+  AP: 0.92
+  RST: 0.01
+CUDNN:
+  BENCHMARK: True
+DATA_DIR: ./data
+DESC: 
+DETERMINISM: False
+EATA:
+  D_MARGIN: 0.05
+  FISHER_ALPHA: 2000
+  NUM_SAMPLES: 2000
+GTTA:
+  LAMBDA_MIXUP: 0.3333333333333333
+  PRETRAIN_STEPS_ADAIN: 20000
+  STEPS_ADAIN: 1
+  USE_STYLE_TRANSFER: False
+LAME:
+  AFFINITY: rbf
+  FORCE_SYMMETRY: False
+  KNN: 5
+  SIGMA: 1.0
+LOG_DEST: diff_cotta_230507_005313.txt
+LOG_TIME: 230507_005313
+MODEL:
+  ADAPTATION: diff_cotta
+  ARCH: Standard
+  EPISODIC: False
+  WEIGHTS: IMAGENET1K_V1
+M_TEACHER:
+  MOMENTUM: 0.999
+OPTIM:
+  BETA: 0.9
+  DAMPENING: 0.0
+  LR: 0.001
+  METHOD: Adam
+  MOMENTUM: 0.9
+  NESTEROV: True
+  STEPS: 1
+  WD: 0.0
+RMT:
+  LAMBDA_CE_SRC: 1.0
+  LAMBDA_CE_TRG: 1.0
+  LAMBDA_CONT: 1.0
+  NUM_SAMPLES_WARM_UP: 50000
+RNG_SEED: 1
+SAVE_DIR: ./output/diff_cotta_cifar10_cd_230507_005313
+SETTING: gradual
+SOURCE:
+  NUM_WORKERS: 4
+  PERCENTAGE: 1.0
+TEST:
+  BATCH_SIZE: 200
+  NUM_WORKERS: 4
+  N_AUGMENTATIONS: 32
+  WINDOW_LENGTH: 1
+[23/05/07 00:53:16] [test_time.py:   46]: Setting up test-time adaptation method: DIFF_COTTA
+/home/mrigankr/Apps/anaconda3/envs/tta/lib/python3.9/site-packages/torchvision/transforms/transforms.py:1418: UserWarning: Argument 'interpolation' of type int is deprecated since 0.13 and will be removed in 0.15. Please use InterpolationMode enum.
+  warnings.warn(
+[23/05/07 00:53:16] [test_time.py:   89]: Using the following domain sequence: ['gaussian_noise', 'shot_noise', 'impulse_noise', 'defocus_blur', 'glass_blur', 'motion_blur', 'zoom_blur', 'snow', 'frost', 'fog', 'brightness', 'contrast', 'elastic_transform', 'pixelate', 'jpeg_compression']
+[23/05/07 00:53:16] [test_time.py:   97]: Using the following severity sequence for each domain: [1, 2, 3, 4, 5, 4, 3, 2, 1]
+[23/05/07 00:53:16] [test_time.py:  110]: resetting model
+[23/05/07 00:54:58] [test_time.py:  138]: cifar10_cd error % [gaussian_noise1][#samples=10000]: 10.38%
+[23/05/07 00:56:42] [test_time.py:  138]: cifar10_cd error % [gaussian_noise2][#samples=10000]: 12.84%
+[23/05/07 01:00:09] [test_time.py:  138]: cifar10_cd error % [gaussian_noise3][#samples=10000]: 16.09%
+[23/05/07 01:04:47] [test_time.py:  138]: cifar10_cd error % [gaussian_noise4][#samples=10000]: 16.56%
+[23/05/07 01:12:22] [test_time.py:  138]: cifar10_cd error % [gaussian_noise5][#samples=10000]: 18.17%
+[23/05/07 01:17:06] [test_time.py:  138]: cifar10_cd error % [gaussian_noise4][#samples=10000]: 16.32%
+[23/05/07 01:20:36] [test_time.py:  138]: cifar10_cd error % [gaussian_noise3][#samples=10000]: 15.27%
+[23/05/07 01:22:18] [test_time.py:  138]: cifar10_cd error % [gaussian_noise2][#samples=10000]: 11.94%
+[23/05/07 01:23:50] [test_time.py:  138]: cifar10_cd error % [gaussian_noise1][#samples=10000]: 9.54%
+[23/05/07 01:23:50] [test_time.py:  114]: not resetting model
+[23/05/07 01:25:24] [test_time.py:  138]: cifar10_cd error % [shot_noise1][#samples=10000]: 8.00%
+[23/05/07 01:26:56] [test_time.py:  138]: cifar10_cd error % [shot_noise2][#samples=10000]: 9.27%
+[23/05/07 01:28:37] [test_time.py:  138]: cifar10_cd error % [shot_noise3][#samples=10000]: 11.97%
+[23/05/07 01:30:40] [test_time.py:  138]: cifar10_cd error % [shot_noise4][#samples=10000]: 12.77%
+[23/05/07 01:36:37] [test_time.py:  138]: cifar10_cd error % [shot_noise5][#samples=10000]: 14.87%
+[23/05/07 01:38:39] [test_time.py:  138]: cifar10_cd error % [shot_noise4][#samples=10000]: 12.75%
+[23/05/07 01:40:22] [test_time.py:  138]: cifar10_cd error % [shot_noise3][#samples=10000]: 11.79%
+[23/05/07 01:41:56] [test_time.py:  138]: cifar10_cd error % [shot_noise2][#samples=10000]: 9.18%
+[23/05/07 01:43:30] [test_time.py:  138]: cifar10_cd error % [shot_noise1][#samples=10000]: 8.12%
+[23/05/07 01:43:30] [test_time.py:  114]: not resetting model
+[23/05/07 01:45:04] [test_time.py:  138]: cifar10_cd error % [impulse_noise1][#samples=10000]: 8.98%
+[23/05/07 01:46:37] [test_time.py:  138]: cifar10_cd error % [impulse_noise2][#samples=10000]: 10.98%
+[23/05/07 01:49:23] [test_time.py:  138]: cifar10_cd error % [impulse_noise3][#samples=10000]: 12.88%
+[23/05/07 01:59:09] [test_time.py:  138]: cifar10_cd error % [impulse_noise4][#samples=10000]: 17.16%
+[23/05/07 02:09:23] [test_time.py:  138]: cifar10_cd error % [impulse_noise5][#samples=10000]: 20.43%
+[23/05/07 02:19:12] [test_time.py:  138]: cifar10_cd error % [impulse_noise4][#samples=10000]: 17.53%
+[23/05/07 02:21:59] [test_time.py:  138]: cifar10_cd error % [impulse_noise3][#samples=10000]: 12.67%
+[23/05/07 02:23:39] [test_time.py:  138]: cifar10_cd error % [impulse_noise2][#samples=10000]: 10.77%
+[23/05/07 02:25:16] [test_time.py:  138]: cifar10_cd error % [impulse_noise1][#samples=10000]: 8.73%
+[23/05/07 02:25:16] [test_time.py:  114]: not resetting model
+[23/05/07 02:26:48] [test_time.py:  138]: cifar10_cd error % [defocus_blur1][#samples=10000]: 7.09%
+[23/05/07 02:28:22] [test_time.py:  138]: cifar10_cd error % [defocus_blur2][#samples=10000]: 7.20%
+[23/05/07 02:29:55] [test_time.py:  138]: cifar10_cd error % [defocus_blur3][#samples=10000]: 7.37%
+[23/05/07 02:31:28] [test_time.py:  138]: cifar10_cd error % [defocus_blur4][#samples=10000]: 8.05%
+[23/05/07 02:33:02] [test_time.py:  138]: cifar10_cd error % [defocus_blur5][#samples=10000]: 9.70%
+[23/05/07 02:34:35] [test_time.py:  138]: cifar10_cd error % [defocus_blur4][#samples=10000]: 8.03%
+[23/05/07 02:36:10] [test_time.py:  138]: cifar10_cd error % [defocus_blur3][#samples=10000]: 7.41%
+[23/05/07 02:37:45] [test_time.py:  138]: cifar10_cd error % [defocus_blur2][#samples=10000]: 7.16%
+[23/05/07 02:39:18] [test_time.py:  138]: cifar10_cd error % [defocus_blur1][#samples=10000]: 7.11%
+[23/05/07 02:39:18] [test_time.py:  114]: not resetting model
+[23/05/07 02:45:37] [test_time.py:  138]: cifar10_cd error % [glass_blur1][#samples=10000]: 14.36%
+[23/05/07 02:51:26] [test_time.py:  138]: cifar10_cd error % [glass_blur2][#samples=10000]: 14.91%
+[23/05/07 02:56:32] [test_time.py:  138]: cifar10_cd error % [glass_blur3][#samples=10000]: 14.70%
+[23/05/07 03:06:34] [test_time.py:  138]: cifar10_cd error % [glass_blur4][#samples=10000]: 21.65%
+[23/05/07 03:16:37] [test_time.py:  138]: cifar10_cd error % [glass_blur5][#samples=10000]: 21.42%
+[23/05/07 03:26:56] [test_time.py:  138]: cifar10_cd error % [glass_blur4][#samples=10000]: 21.49%
+[23/05/07 03:32:09] [test_time.py:  138]: cifar10_cd error % [glass_blur3][#samples=10000]: 14.72%
+[23/05/07 03:37:58] [test_time.py:  138]: cifar10_cd error % [glass_blur2][#samples=10000]: 14.93%
+[23/05/07 03:44:08] [test_time.py:  138]: cifar10_cd error % [glass_blur1][#samples=10000]: 14.52%
+[23/05/07 03:44:08] [test_time.py:  114]: not resetting model
+[23/05/07 03:45:40] [test_time.py:  138]: cifar10_cd error % [motion_blur1][#samples=10000]: 8.00%
+[23/05/07 03:47:13] [test_time.py:  138]: cifar10_cd error % [motion_blur2][#samples=10000]: 8.75%
+[23/05/07 03:48:46] [test_time.py:  138]: cifar10_cd error % [motion_blur3][#samples=10000]: 10.02%
+[23/05/07 03:50:19] [test_time.py:  138]: cifar10_cd error % [motion_blur4][#samples=10000]: 10.07%
+[23/05/07 03:51:53] [test_time.py:  138]: cifar10_cd error % [motion_blur5][#samples=10000]: 11.22%
+[23/05/07 03:53:33] [test_time.py:  138]: cifar10_cd error % [motion_blur4][#samples=10000]: 10.04%
+[23/05/07 03:55:13] [test_time.py:  138]: cifar10_cd error % [motion_blur3][#samples=10000]: 9.87%
+[23/05/07 03:56:49] [test_time.py:  138]: cifar10_cd error % [motion_blur2][#samples=10000]: 8.64%
+[23/05/07 03:58:22] [test_time.py:  138]: cifar10_cd error % [motion_blur1][#samples=10000]: 8.06%
+[23/05/07 03:58:22] [test_time.py:  114]: not resetting model
+[23/05/07 03:59:55] [test_time.py:  138]: cifar10_cd error % [zoom_blur1][#samples=10000]: 7.95%
+[23/05/07 04:01:29] [test_time.py:  138]: cifar10_cd error % [zoom_blur2][#samples=10000]: 8.09%
+[23/05/07 04:03:03] [test_time.py:  138]: cifar10_cd error % [zoom_blur3][#samples=10000]: 8.54%
+[23/05/07 04:04:38] [test_time.py:  138]: cifar10_cd error % [zoom_blur4][#samples=10000]: 9.11%
+[23/05/07 04:06:11] [test_time.py:  138]: cifar10_cd error % [zoom_blur5][#samples=10000]: 9.93%
+[23/05/07 04:07:45] [test_time.py:  138]: cifar10_cd error % [zoom_blur4][#samples=10000]: 9.09%
+[23/05/07 04:09:20] [test_time.py:  138]: cifar10_cd error % [zoom_blur3][#samples=10000]: 8.54%
+[23/05/07 04:10:53] [test_time.py:  138]: cifar10_cd error % [zoom_blur2][#samples=10000]: 8.23%
+[23/05/07 04:12:27] [test_time.py:  138]: cifar10_cd error % [zoom_blur1][#samples=10000]: 8.03%
+[23/05/07 04:12:27] [test_time.py:  114]: not resetting model
+[23/05/07 04:14:00] [test_time.py:  138]: cifar10_cd error % [snow1][#samples=10000]: 8.75%
+[23/05/07 04:15:35] [test_time.py:  138]: cifar10_cd error % [snow2][#samples=10000]: 10.28%
+[23/05/07 04:17:08] [test_time.py:  138]: cifar10_cd error % [snow3][#samples=10000]: 10.89%
+[23/05/07 04:18:45] [test_time.py:  138]: cifar10_cd error % [snow4][#samples=10000]: 12.79%
+[23/05/07 04:20:18] [test_time.py:  138]: cifar10_cd error % [snow5][#samples=10000]: 13.29%
+[23/05/07 04:21:54] [test_time.py:  138]: cifar10_cd error % [snow4][#samples=10000]: 12.72%
+[23/05/07 04:23:34] [test_time.py:  138]: cifar10_cd error % [snow3][#samples=10000]: 10.80%
+[23/05/07 04:25:08] [test_time.py:  138]: cifar10_cd error % [snow2][#samples=10000]: 10.15%
+[23/05/07 04:26:44] [test_time.py:  138]: cifar10_cd error % [snow1][#samples=10000]: 8.78%
+[23/05/07 04:26:44] [test_time.py:  114]: not resetting model
+[23/05/07 04:28:20] [test_time.py:  138]: cifar10_cd error % [frost1][#samples=10000]: 8.11%
+[23/05/07 04:29:53] [test_time.py:  138]: cifar10_cd error % [frost2][#samples=10000]: 9.29%
+[23/05/07 04:31:25] [test_time.py:  138]: cifar10_cd error % [frost3][#samples=10000]: 10.53%
+[23/05/07 04:32:58] [test_time.py:  138]: cifar10_cd error % [frost4][#samples=10000]: 10.53%
+[23/05/07 04:34:39] [test_time.py:  138]: cifar10_cd error % [frost5][#samples=10000]: 12.24%
+[23/05/07 04:36:12] [test_time.py:  138]: cifar10_cd error % [frost4][#samples=10000]: 10.44%
+[23/05/07 04:37:45] [test_time.py:  138]: cifar10_cd error % [frost3][#samples=10000]: 10.37%
+[23/05/07 04:39:17] [test_time.py:  138]: cifar10_cd error % [frost2][#samples=10000]: 9.28%
+[23/05/07 04:40:49] [test_time.py:  138]: cifar10_cd error % [frost1][#samples=10000]: 8.21%
+[23/05/07 04:40:49] [test_time.py:  114]: not resetting model
+[23/05/07 04:42:22] [test_time.py:  138]: cifar10_cd error % [fog1][#samples=10000]: 7.79%
+[23/05/07 04:43:55] [test_time.py:  138]: cifar10_cd error % [fog2][#samples=10000]: 8.01%
+[23/05/07 04:45:28] [test_time.py:  138]: cifar10_cd error % [fog3][#samples=10000]: 8.15%
+[23/05/07 04:47:01] [test_time.py:  138]: cifar10_cd error % [fog4][#samples=10000]: 8.71%
+[23/05/07 04:48:32] [test_time.py:  138]: cifar10_cd error % [fog5][#samples=10000]: 11.48%
+[23/05/07 04:50:05] [test_time.py:  138]: cifar10_cd error % [fog4][#samples=10000]: 8.75%
+[23/05/07 04:51:37] [test_time.py:  138]: cifar10_cd error % [fog3][#samples=10000]: 8.11%
+[23/05/07 04:53:10] [test_time.py:  138]: cifar10_cd error % [fog2][#samples=10000]: 7.93%
+[23/05/07 04:54:42] [test_time.py:  138]: cifar10_cd error % [fog1][#samples=10000]: 7.84%
+[23/05/07 04:54:42] [test_time.py:  114]: not resetting model
+[23/05/07 04:56:15] [test_time.py:  138]: cifar10_cd error % [brightness1][#samples=10000]: 7.80%
+[23/05/07 04:57:48] [test_time.py:  138]: cifar10_cd error % [brightness2][#samples=10000]: 7.81%
+[23/05/07 04:59:20] [test_time.py:  138]: cifar10_cd error % [brightness3][#samples=10000]: 7.88%
+[23/05/07 05:00:53] [test_time.py:  138]: cifar10_cd error % [brightness4][#samples=10000]: 7.86%
+[23/05/07 05:02:25] [test_time.py:  138]: cifar10_cd error % [brightness5][#samples=10000]: 8.19%
+[23/05/07 05:03:59] [test_time.py:  138]: cifar10_cd error % [brightness4][#samples=10000]: 7.91%
+[23/05/07 05:05:30] [test_time.py:  138]: cifar10_cd error % [brightness3][#samples=10000]: 7.88%
+[23/05/07 05:07:03] [test_time.py:  138]: cifar10_cd error % [brightness2][#samples=10000]: 7.79%
+[23/05/07 05:08:36] [test_time.py:  138]: cifar10_cd error % [brightness1][#samples=10000]: 7.89%
+[23/05/07 05:08:36] [test_time.py:  114]: not resetting model
+[23/05/07 05:10:08] [test_time.py:  138]: cifar10_cd error % [contrast1][#samples=10000]: 7.86%
+[23/05/07 05:11:41] [test_time.py:  138]: cifar10_cd error % [contrast2][#samples=10000]: 7.90%
+[23/05/07 05:13:13] [test_time.py:  138]: cifar10_cd error % [contrast3][#samples=10000]: 7.99%
+[23/05/07 05:14:46] [test_time.py:  138]: cifar10_cd error % [contrast4][#samples=10000]: 8.11%
+[23/05/07 05:16:18] [test_time.py:  138]: cifar10_cd error % [contrast5][#samples=10000]: 9.24%
+[23/05/07 05:17:51] [test_time.py:  138]: cifar10_cd error % [contrast4][#samples=10000]: 8.09%
+[23/05/07 05:19:23] [test_time.py:  138]: cifar10_cd error % [contrast3][#samples=10000]: 7.96%
+[23/05/07 05:20:56] [test_time.py:  138]: cifar10_cd error % [contrast2][#samples=10000]: 7.89%
+[23/05/07 05:22:29] [test_time.py:  138]: cifar10_cd error % [contrast1][#samples=10000]: 7.85%
+[23/05/07 05:22:29] [test_time.py:  114]: not resetting model
+[23/05/07 05:24:01] [test_time.py:  138]: cifar10_cd error % [elastic_transform1][#samples=10000]: 9.29%
+[23/05/07 05:25:34] [test_time.py:  138]: cifar10_cd error % [elastic_transform2][#samples=10000]: 8.72%
+[23/05/07 05:27:06] [test_time.py:  138]: cifar10_cd error % [elastic_transform3][#samples=10000]: 9.25%
+[23/05/07 05:28:39] [test_time.py:  138]: cifar10_cd error % [elastic_transform4][#samples=10000]: 11.85%
+[23/05/07 05:33:55] [test_time.py:  138]: cifar10_cd error % [elastic_transform5][#samples=10000]: 17.11%
+[23/05/07 05:35:28] [test_time.py:  138]: cifar10_cd error % [elastic_transform4][#samples=10000]: 11.81%
+[23/05/07 05:37:01] [test_time.py:  138]: cifar10_cd error % [elastic_transform3][#samples=10000]: 9.34%
+[23/05/07 05:38:33] [test_time.py:  138]: cifar10_cd error % [elastic_transform2][#samples=10000]: 8.81%
+[23/05/07 05:40:07] [test_time.py:  138]: cifar10_cd error % [elastic_transform1][#samples=10000]: 9.41%
+[23/05/07 05:40:07] [test_time.py:  114]: not resetting model
+[23/05/07 05:41:39] [test_time.py:  138]: cifar10_cd error % [pixelate1][#samples=10000]: 8.17%
+[23/05/07 05:43:12] [test_time.py:  138]: cifar10_cd error % [pixelate2][#samples=10000]: 8.33%
+[23/05/07 05:44:44] [test_time.py:  138]: cifar10_cd error % [pixelate3][#samples=10000]: 8.74%
+[23/05/07 05:46:17] [test_time.py:  138]: cifar10_cd error % [pixelate4][#samples=10000]: 9.60%
+[23/05/07 05:48:21] [test_time.py:  138]: cifar10_cd error % [pixelate5][#samples=10000]: 12.05%
+[23/05/07 05:49:54] [test_time.py:  138]: cifar10_cd error % [pixelate4][#samples=10000]: 9.58%
+[23/05/07 05:51:25] [test_time.py:  138]: cifar10_cd error % [pixelate3][#samples=10000]: 8.83%
+[23/05/07 05:52:59] [test_time.py:  138]: cifar10_cd error % [pixelate2][#samples=10000]: 8.36%
+[23/05/07 05:54:31] [test_time.py:  138]: cifar10_cd error % [pixelate1][#samples=10000]: 8.18%
+[23/05/07 05:54:31] [test_time.py:  114]: not resetting model
+[23/05/07 05:56:03] [test_time.py:  138]: cifar10_cd error % [jpeg_compression1][#samples=10000]: 9.50%
+[23/05/07 05:57:36] [test_time.py:  138]: cifar10_cd error % [jpeg_compression2][#samples=10000]: 11.14%
+[23/05/07 05:59:39] [test_time.py:  138]: cifar10_cd error % [jpeg_compression3][#samples=10000]: 11.85%
+[23/05/07 06:03:53] [test_time.py:  138]: cifar10_cd error % [jpeg_compression4][#samples=10000]: 12.94%
+[23/05/07 06:10:40] [test_time.py:  138]: cifar10_cd error % [jpeg_compression5][#samples=10000]: 14.52%
+[23/05/07 06:14:55] [test_time.py:  138]: cifar10_cd error % [jpeg_compression4][#samples=10000]: 12.99%
+[23/05/07 06:17:00] [test_time.py:  138]: cifar10_cd error % [jpeg_compression3][#samples=10000]: 11.90%
+[23/05/07 06:18:33] [test_time.py:  138]: cifar10_cd error % [jpeg_compression2][#samples=10000]: 11.06%
+[23/05/07 06:20:05] [test_time.py:  138]: cifar10_cd error % [jpeg_compression1][#samples=10000]: 9.76%
+[23/05/07 06:20:05] [test_time.py:  142]: mean error: 10.53%, mean error at 5: 13.59%
