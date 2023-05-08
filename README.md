@@ -11,6 +11,12 @@ conda activate tta
 pip install diffusers
 ```
 
+## Generating Denoised Samples
+
+To generate denoised samples of images of all 15 noise types and severity levels in CIFAR 10C, run the command
+
+```python diffusion_batched.py```
+
 ## Classification
 
 <details open>
