@@ -78,7 +78,8 @@ def get_diffuson_output(img, timesteps, img_path, save_path):
 
 
 #write dataloader 
-list_corruptions = ['brightness', 'fog', 'contrast', 'frost']
+list_corruptions = ['brightness', 'fog', 'contrast', 'frost', 'defocus_blur', 'elastic_transform', 'glass_blur', 'impulse_noise', 'pixelate', 'shot_noise', 'snow', 'zoom_blur', 'jpeg_compression', 'motion_blur', 'pixelate']
+# list_corruptions = ['brightness', 'fog', 'contrast', 'frost']
 # list_corruptions = ['defocus_blur', 'elastic_transform', 'glass_blur', 'impulse_noise']
 # list_corruptions = ['brightness', 'contrast', 'defocus_blur', 'elastic_transform']
 # list_corruptions = ['pixelate', 'shot_noise', 'snow', 'zoom_blur']
@@ -88,7 +89,7 @@ list_corruptions = ['brightness', 'fog', 'contrast', 'frost']
 # list_corruptions = ["brightness", "contrast"]
 # list_corruptions = ["defocus_blur", "elastic_transform"]
 # list_corruptions = ["glass_blur", "impulse_noise"]
-list_severity = [1]
+list_severity = [1, 2, 3, 4, 5]
 root_dir = "/home/scratch/rohans2/vlr_project/cifar10c/samples/"
 dataset = Cifar10cDataset(root_dir, list_corruptions, list_severity)
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=128, shuffle=False, num_workers=8)
