@@ -60,16 +60,3 @@ Further models and initializations can be found [here (torchvision)](https://pyt
 ```bash
 python test_time.py --cfg cfgs/imagenet_c/tent.yaml MODEL.ARCH resnet50 MODEL.WEIGHTS IMAGENET1K_V1 SETTING reset_each_shift
 ```
-
-
-### Acknowledgements
-+ Robustbench [official](https://github.com/RobustBench/robustbench)
-+ CoTTA [official](https://github.com/qinenergy/cotta)
-+ TENT [official](https://github.com/DequanWang/tent)
-+ AdaContrast [official](https://github.com/DianCh/AdaContrast)
-+ EATA [official](https://github.com/mr-eggplant/EATA)
-+ LAME [official](https://github.com/fiveai/LAME)
-+ MEMO [official](https://github.com/zhangmarvin/memo)
-+ RoTTA [official](https://github.com/BIT-DA/RoTTA)
-+ SAR [official](https://github.com/mr-eggplant/SAR)
-**** TO ADD RMT? ****
