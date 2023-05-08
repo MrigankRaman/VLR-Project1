@@ -69,6 +69,8 @@ We provide config files for all experiments and methods. Simply run the followin
 python test_time.py --cfg cfgs/[cifar10_c/imagenet_c/]/[source/tent/adacontrast/cotta/diff_cotta].yaml
 ```
 
+The hyperparameters used in our experiments are available at test-time-adaptation/classification/cfgs/cifar10_c/diff_cotta.yaml and test-time-adaptation/classification/cfgs/imagenet_c/diff_cotta.yaml 
+
 ### Changing Configurations
 Changing the evaluation configuration is extremely easy. For example, to run TENT on ImageNet-to-ImageNet-C in the `reset_each_shift` setting with a ResNet-50 and the `IMAGENET1K_V1` initialization, the arguments below have to be passed. 
 Further models and initializations can be found [here (torchvision)](https://pytorch.org/vision/0.14/models.html) or [here (timm)](https://github.com/huggingface/pytorch-image-models/tree/v0.6.13).
