@@ -1,6 +1,0 @@
-[submodule "DDA1"]
-	path = DDA1
-	url = https://github.com/shiyegao/DDA.git
-[submodule "tta"]
-	path = tta
-	url = https://github.com/mariodoebler/test-time-adaptation.git
