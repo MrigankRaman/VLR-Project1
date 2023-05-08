@@ -13,9 +13,18 @@ pip install diffusers
 
 ## Generating Denoised Samples
 
-To generate denoised samples of images of all 15 noise types and severity levels in CIFAR 10C, run the command
+To generate denoised samples of images of all 15 noise types and severity levels in CIFAR 10C, run the command,
 
 ```python diffusion_batched.py```
+
+The hyperparameters used are in the script, and also summarized below for convenience,
+
+| Hyperparameter | Value |
+| -------------- | ----- |
+| D (ILVR)       | 1     |
+| Scale (ILVR)   | 1     |
+| Diffusion steps| 1000  |
+| $\alpha$       | 0.9   |
 
 ## Classification
 
